@@ -14,7 +14,7 @@ const PizzaList = () => {
       </p>
       <div className={styles.wrapper}>
         {pizzaData.map((i) => (
-          <PizzaCard id={i.id} title={i.title} price={i.price} img={i.img} />
+          <PizzaCard key={i.id} title={i.title} price={i.price} img={i.img} />
         ))}
       </div>
     </div>

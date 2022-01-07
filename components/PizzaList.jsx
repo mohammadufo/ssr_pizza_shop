@@ -3,7 +3,7 @@ import PizzaCard from "./PizzaCard";
 import { pizzaData } from "./../data";
 import Link from "next/link";
 
-const PizzaList = () => {
+const PizzaList = ({ pizzaList }) => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>THE BEST PIZZA IN TOWN</h1>
@@ -13,8 +13,8 @@ const PizzaList = () => {
         sit amet, consectetur adipiscing elit.
       </p>
       <div className={styles.wrapper}>
-        {pizzaData.map((i) => (
-          <PizzaCard key={i.id} title={i.title} price={i.price} img={i.img} />
+        {pizzaList.map((pizza) => (
+          <PizzaCard key={pizza._id} pizza={pizza} />
         ))}
       </div>
     </div>
